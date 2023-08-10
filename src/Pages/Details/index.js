@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useLocation } from "react-router-dom"
 import { GetDetailsProduct } from "../../Store/Actions/products"
-import './styles.css'
+import './detailsStyles.css'
 
 const DetailsProduct = () => {
   const location = useLocation()
@@ -19,9 +19,15 @@ const DetailsProduct = () => {
           <div className="text-price">${data?.price}</div>
         </div>
         <div className="wrapper-right">
-          <h2>{data?.title}</h2>
-          <div className="">{data?.description}</div>
-          <div className="">{data?.category?.name}</div>
+          <h1>{data?.title}</h1>
+          <div className="wrapper-desc">
+            <div className="text-label">Description</div>
+            <div className="text-details">{data?.description}</div>
+          </div>
+          <div className="wrapper-cate">
+            <div className="text-label">Category</div>
+            <div className="text-details">{data?.category?.name}</div>
+          </div>
         </div>
       </div>
     </>

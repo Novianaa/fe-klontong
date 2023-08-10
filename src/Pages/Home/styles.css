@@ -1,10 +1,20 @@
 .wrapper-products {
+  background-color: #56a1ec;
   padding: 3%;
-  background-color: rgb(86, 161, 236);
+
+}
+
+.text-header {
+  color: #ffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1%;
+}
+
+.wrapper-card-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
 
 .card-product {
@@ -12,7 +22,7 @@
   width: 20%;
   border: 1px solid #dedede;
   border-radius: 10px;
-  padding: 1% 1%;
+  padding: 1%;
   text-align: center;
   text-decoration: none;
   color: #060606;
@@ -38,4 +48,24 @@
 
 .name-product {
   margin-bottom: 3%;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-products {
+    padding: 1%;
+
+  }
+
+  .card-product {
+    width: 29%;
+    margin: 1% 0;
+
+  }
+
+  .wrapper-text {
+    font-size: 14px;
+    padding: 3% 2%;
+  }
+
+
 }
