@@ -1,0 +1,25 @@
+.wrapper-details {
+  margin: 3%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.wrapper-left {
+  width: 35%;
+  text-align: center;
+}
+
+.image-product {
+  width: 70%;
+}
+
+.text-price {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.wrapper-right {
+  width: 60%;
+  background-color: blue;
+}

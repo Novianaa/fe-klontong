@@ -1,0 +1,41 @@
+.wrapper-products {
+  padding: 3%;
+  background-color: rgb(86, 161, 236);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.card-product {
+  margin: 1% 0;
+  width: 20%;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 1% 1%;
+  text-align: center;
+  text-decoration: none;
+  color: #060606;
+}
+
+.card-product:hover {
+  background-color: #eeeeeeaa;
+}
+
+.image-product {
+  width: 100%;
+  margin: 3% 0;
+  border-radius: 18px;
+}
+
+.wrapper-text {
+  font-size: 15px;
+  margin: 2% 0;
+  background-color: #eeeeeeaa;
+  padding: 3% 0;
+  border-radius: 10px;
+}
+
+.name-product {
+  margin-bottom: 3%;
+}
