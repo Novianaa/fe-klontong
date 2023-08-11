@@ -1,11 +1,6 @@
 const initialState = {
   loading: false,
-  data: {
-    "user_id": null,
-    "token,": null,
-    "photo": null
-  },
-  error: null,
+  data: {},
   isLogin: false,
 }
 
@@ -17,12 +12,9 @@ const Auth = (state = initialState, action = {}) => {
       return { ...state, loading: false, data: state.data, error: action.payload, isLogin: false }
     case "LOGIN_SUCCESS":
       return { ...state, loading: false, data: action.payload, error: null, isLogin: true, }
-    case "AUTH_LOGOUT":
-      return { loading: false, data: { "user_id": null, "token,": null, "photo": null }, error: null, isLogin: false, }
     default:
       return state
   }
 }
-
 
 export default Auth

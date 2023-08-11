@@ -5,13 +5,12 @@ import { GetProducts } from '../../Store/Actions/products'
 import './styles.css'
 
 const Home = () => {
-  let { data, loading, } = useSelector((s) => s.products)
+  let { data, } = useSelector((s) => s.products)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(GetProducts())
   }, [dispatch])
   const navigate = useNavigate()
-
   return (
     <>
       <div className="wrapper-products">
@@ -24,7 +23,6 @@ const Home = () => {
                 <div className="wrapper-text">
                   <div className="name-product">{product.title}</div>
                   <div className="price-product">${product.price}</div>
-                  {/* <button className="btn-details" >details</button> */}
                 </div>
               </div>
             )

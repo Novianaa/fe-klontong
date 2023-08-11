@@ -47,7 +47,6 @@ export const GetProducts = () => {
         method: 'GET',
         url: `https://api.escuelajs.co/api/v1/products?limit=${limit}&offset=0`,
       })
-      console.log('first', result)
       dispatch(GetProductsSuccess(result.data))
     }
     catch (err) {

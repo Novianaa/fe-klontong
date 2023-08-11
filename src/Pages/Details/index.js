@@ -1,16 +1,23 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { GetDetailsProduct } from "../../Store/Actions/products"
 import './detailsStyles.css'
 
 const DetailsProduct = () => {
   const location = useLocation()
-  let { data } = useSelector((s) => s.details)
+  const navigate = useNavigate()
   const dispatch = useDispatch()
+  const { isLogin } = useSelector((s) => s.auth)
+  const { data } = useSelector((s) => s.details)
+
   useEffect(() => {
     dispatch(GetDetailsProduct(location.state.id))
-  }, [dispatch, location.state.id])
+    if (isLogin !== true) {
+      navigate('/login');
+    }
+  }, [dispatch, isLogin, location.state.id, navigate])
+
   return (
     <>
       <div className="wrapper-details">

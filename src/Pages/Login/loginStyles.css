@@ -1,10 +1,17 @@
 .wrapper-login {
+  padding: 5%;
   background-color: #56a1ec;
   height: 100vh;
+
 }
 
 .wrapper-login-card {
-  padding: 3% 0;
+  border: 2px solid #fff;
+  padding: 3%;
+}
+
+.wrapper-login-header {
+  margin: 2% 0 4%;
 }
 
 .header-login {
@@ -23,7 +30,7 @@
 .wrapper-part {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 25%;
   margin: 0 2%;
 }
 
@@ -32,14 +39,15 @@
 }
 
 .wrapper-input {
-  padding: 4%;
+  padding: 5%;
   border-radius: 10px;
   border: none;
+  background-color: #eeeeee;
 }
 
 .wrapper-btn {
   text-align: center;
-  margin: 2% 0;
+  margin: 5% 0 2%;
 }
 
 .btn-login {
@@ -47,4 +55,30 @@
   padding: 1%;
   border: none;
   border-radius: 10px;
+  background-color: #eeeeee;
+
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper-form {
+    display: block;
+
+  }
+
+  .wrapper-part {
+    display: flex;
+    width: 100%;
+    margin: 4% 0;
+  }
+
+  .btn-login {
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    font-size: 18px;
+    margin: 5% 0;
+
+  }
 }
